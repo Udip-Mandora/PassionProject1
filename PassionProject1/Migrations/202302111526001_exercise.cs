@@ -1,4 +1,4 @@
-﻿updatenamespace PassionProject1.Migrations
+﻿namespace PassionProject1.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

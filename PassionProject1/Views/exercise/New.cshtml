@@ -1,0 +1,16 @@
+﻿@model PassionProject1.Models.exercise
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Add Exercise</h2>
+<form action="/Exercise/Create" method="POST">
+    <div>
+        <label>Exercise Name: </label> <input name="exerciseName" />
+    </div>
+    <div>
+        <input type="submit" value="Add Exercise" />
+    </div>
+</form>
+
+

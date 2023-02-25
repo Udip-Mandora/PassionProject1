@@ -1,0 +1,28 @@
+﻿@model PassionProject1.Models.issues
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Issue</h2>
+<form action="/Issues/Update/@Model.issueId" method="POST">
+    <div>
+        <label>Id: </label>
+        <input type="text" name="issueId" value="@Model.issueId" />
+    </div>
+
+    <div>
+        <label>Issue Name: </label>
+        <input type="text"  name="issueName" value="@Model.issueName" />
+    </div>
+
+    <div>
+        <label>Issue Description: </label>
+        <input type="text"  name="issueDescription" value="@Model.issueDescription" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update Issue" />
+    </div>
+
+</form>
+

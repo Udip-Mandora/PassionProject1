@@ -1,0 +1,15 @@
+﻿@model PassionProject1.Models.issues
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this Issue?</h2>
+<a href="/Issues/List">Cancel</a>
+<h3>Issue ID: @Model.issueId</h3>
+<h4>Issue Name: @Model.issueName</h4>
+<div>
+    <p>Issue Description: @Model.issueDescription</p>
+</div>
+<form action="/Issues/Delete/@Model.issueId" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>

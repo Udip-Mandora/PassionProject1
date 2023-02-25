@@ -182,7 +182,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\exerciseController.cs" />
+    <Compile Include="Controllers\exercisesDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\issuesController.cs" />
+    <Compile Include="Controllers\issuesDataController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -199,12 +203,17 @@
     <Compile Include="Migrations\202302111526001_exercise.designer.cs">
       <DependentUpon>202302111526001_exercise.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302201656028_issues-exercises.cs" />
+    <Compile Include="Migrations\202302201656028_issues-exercises.designer.cs">
+      <DependentUpon>202302201656028_issues-exercises.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\exercise.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\issues.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\treatment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -217,6 +226,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="jsondata\issues.json" />
+    <None Include="jsondata\exercises.json" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -264,6 +275,18 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\issues\List.cshtml" />
+    <Content Include="Views\issues\Details.cshtml" />
+    <Content Include="Views\exercise\List.cshtml" />
+    <Content Include="Views\issues\New.cshtml" />
+    <Content Include="Views\issues\Error.cshtml" />
+    <Content Include="Views\exercise\Details.cshtml" />
+    <Content Include="Views\exercise\New.cshtml" />
+    <Content Include="Views\exercise\Error.cshtml" />
+    <Content Include="Views\issues\Edit.cshtml" />
+    <Content Include="Views\issues\DeleteConfirm.cshtml" />
+    <Content Include="Views\exercise\Edit.cshtml" />
+    <Content Include="Views\exercise\DeleteConfirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -290,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302111526001_exercise.resx">
       <DependentUpon>202302111526001_exercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302201656028_issues-exercises.resx">
+      <DependentUpon>202302201656028_issues-exercises.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

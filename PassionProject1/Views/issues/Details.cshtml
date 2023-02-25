@@ -1,0 +1,23 @@
+﻿@model PassionProject1.Models.issues
+@{
+    ViewBag.Title = "View";
+}
+
+<a href="/Issues/List">Go Back to List of Issues</a>
+<h2>Show Issue</h2>
+<h3>Issue Name: @Model.issueName</h3>
+<div>Issue Description: @Model.issueDescription</div>
+<br />
+<!--<div>
+    <h3>Exercise to cure this issue is</h3>
+    foreach(var exercise in Model.exercise)
+      {
+         <a href="/Exercise/Details/exercise.exerciseId">exercise.exerciseName'</a>
+      }
+</div>-->
+
+<a href="/Issues/Edit/@Model.issueId">Update Issue</a>
+<br />
+<br />
+<a href="/Issues/DeleteConfirm/@Model.issueId">Delete Issue</a>
+

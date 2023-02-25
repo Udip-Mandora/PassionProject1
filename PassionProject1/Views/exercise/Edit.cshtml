@@ -1,0 +1,22 @@
+﻿@model PassionProject1.Models.exercise
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Exercise</h2>
+<form action="/Exercise/Update/@Model.exerciseId" method="POST">
+    <div>
+        <label>Id: </label>
+        <input type="text" name="exerciseId" value="@Model.exerciseId" />
+    </div>
+
+    <div>
+        <label>Exercise Name: </label>
+        <input type="text" name="exerciseName" value="@Model.exerciseName" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update Exercise" />
+    </div>
+</form>
+

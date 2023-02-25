@@ -1,0 +1,18 @@
+﻿@model PassionProject1.Models.issues
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add an Issue</h2>
+<form action="/Issues/Create" method="POST">
+    <div>
+        <label>Issue Name: </label> <input name="issueName"/>
+    </div>
+
+    <div>
+        <label>Issue Description: </label> <input name="issueDescription" />
+    </div>
+    <div>
+        <input type="submit" value="Add Issue" />
+    </div>
+</form>

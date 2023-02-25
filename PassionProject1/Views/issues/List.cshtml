@@ -1,0 +1,12 @@
+﻿@model IEnumerable<PassionProject1.Models.issues> 
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Issues/New">Add Issue</a>
+@foreach(var issues in Model)
+            {
+                <h3><a href="/Issues/Details/@issues.issueId">@issues.issueName</a></h3>
+            }
+

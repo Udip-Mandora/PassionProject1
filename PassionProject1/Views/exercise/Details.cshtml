@@ -1,0 +1,12 @@
+﻿@model PassionProject1.Models.exercise
+@{
+    ViewBag.Title = "Details";
+}
+
+<a href="/Exercise/List">Go Back To List of Exercises</a>
+<h2>Show Exercise</h2>
+<h3>Exercise Name: @Model.exerciseName</h3>
+<br/>
+<a href="/Exercise/Edit/@Model.exerciseId">Update Exercise</a>
+<br/><br/>
+<a href="/Exercise/DeleteConfirm/@Model.exerciseId">Delete Exercise</a>
